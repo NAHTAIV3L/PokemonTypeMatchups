@@ -122,6 +122,7 @@ int main()
         else if (TypeChoice == "fairy") { std::cout << "\n\nPicked Fairy:" << Fairy.str(); }
         else if (TypeChoice == "quit") { break; }
         else { std::cout << "\n\nDid not pick a valid type"; }
+        std::cin.get();
     }
     return 0;
 }
