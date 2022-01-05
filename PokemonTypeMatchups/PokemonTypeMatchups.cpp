@@ -27,47 +27,37 @@ public:
     std::string FloatToFraction(float f)
     {
         if(f == 1.0f)
-        {
             return "1";
-        }
         else if (f == 2.0f)
-        {
             return "2";
-        }
         else if (f == 0.5f)
-        {
             return "1/2";
-        }
         else if (f == 0.0f)
-        {
             return "0";
-        }
         else 
-        {
             return "?";
-        }
     }
 
     std::string str()
     {
-        std::string s = "\n  Normal:   ";  s += FloatToFraction(Normal);
-        s += "\n  Fire:     ";               s += FloatToFraction(Fire);
-        s += "\n  Water:    ";              s += FloatToFraction(Water);
-        s += "\n  Electric: ";           s += FloatToFraction(Electric);
-        s += "\n  Grass:    ";              s += FloatToFraction(Grass);
-        s += "\n  Ice:      ";                s += FloatToFraction(Ice);
-        s += "\n  Fighting: ";           s += FloatToFraction(Fighting);
+        std::string s = "\n\n  Normal:   ";s += FloatToFraction(Normal);
+        s += "\n  Fire:     ";             s += FloatToFraction(Fire);
+        s += "\n  Water:    ";             s += FloatToFraction(Water);
+        s += "\n  Electric: ";             s += FloatToFraction(Electric);
+        s += "\n  Grass:    ";             s += FloatToFraction(Grass);
+        s += "\n  Ice:      ";             s += FloatToFraction(Ice);
+        s += "\n  Fighting: ";             s += FloatToFraction(Fighting);
         s += "\n  Poison:   ";             s += FloatToFraction(Poison);
         s += "\n  Ground:   ";             s += FloatToFraction(Ground);
         s += "\n  Flying:   ";             s += FloatToFraction(Flying);
-        s += "\n  Psychic:  ";            s += FloatToFraction(Psychic);
-        s += "\n  Bug:      ";                s += FloatToFraction(Bug);
-        s += "\n  Rock:     ";               s += FloatToFraction(Rock);
-        s += "\n  Ghost:    ";              s += FloatToFraction(Ghost);
+        s += "\n  Psychic:  ";             s += FloatToFraction(Psychic);
+        s += "\n  Bug:      ";             s += FloatToFraction(Bug);
+        s += "\n  Rock:     ";             s += FloatToFraction(Rock);
+        s += "\n  Ghost:    ";             s += FloatToFraction(Ghost);
         s += "\n  Dragon:   ";             s += FloatToFraction(Dragon);
-        s += "\n  Dark:     ";               s += FloatToFraction(Dark);
-        s += "\n  Steel:    ";              s += FloatToFraction(Steel);
-        s += "\n  Fairy:    ";              s += FloatToFraction(Fairy);
+        s += "\n  Dark:     ";             s += FloatToFraction(Dark);
+        s += "\n  Steel:    ";             s += FloatToFraction(Steel);
+        s += "\n  Fairy:    ";             s += FloatToFraction(Fairy);
         return s;
     }
 };
@@ -76,24 +66,24 @@ public:
 
 int main()
 {
-    Type Normal=    {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.5f, 0.0f, 1.0f, 1.0f, 0.5f, 1.0f};
-    Type Fire=      {1.0f, 0.5f, 0.5f, 1.0f, 2.0f, 2.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 0.5f, 1.0f, 0.5f, 1.0f, 2.0f, 1.0f};
-    Type Water=     {1.0f, 2.0f, 0.5f, 1.0f, 0.5f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f, 0.5f, 1.0f, 1.0f, 1.0f};
-    Type Electric=  {1.0f, 1.0f, 2.0f, 0.5f, 0.5f, 1.0f, 1.0f, 1.0f, 0.0f, 2.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.5f, 1.0f, 1.0f, 1.0f};
-    Type Grass=     {1.0f, 0.5f, 2.0f, 1.0f, 0.5f, 1.0f, 1.0f, 0.5f, 2.0f, 0.5f, 1.0f, 0.5f, 2.0f, 1.0f, 0.5f, 1.0f, 0.5f, 1.0f};
-    Type Ice=       {1.0f, 0.5f, 0.5f, 1.0f, 2.0f, 0.5f, 1.0f, 1.0f, 2.0f, 2.0f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f, 0.5f, 1.0f};
-    Type Fighting=  {2.0f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f, 0.5f, 1.0f, 0.5f, 0.5f, 0.5f, 2.0f, 0.0f, 1.0f, 2.0f, 2.0f, 0.5f};
-    Type Poison=    {1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f, 1.0f, 0.5f, 0.5f, 1.0f, 1.0f, 1.0f, 0.5f, 0.5f, 1.0f, 1.0f, 0.0f, 2.0f};
-    Type Ground=    {1.0f, 2.0f, 1.0f, 2.0f, 0.5f, 1.0f, 1.0f, 2.0f, 1.0f, 0.0f, 1.0f, 0.5f, 2.0f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f};
-    Type Flying=    {1.0f, 1.0f, 1.0f, 0.5f, 2.0f, 1.0f, 2.0f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 0.5f, 1.0f, 1.0f, 1.0f, 0.5f, 1.0f};
-    Type Psychic=   {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 2.0f, 1.0f, 1.0f, 0.5f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.5f, 1.0f};
-    Type Bug=       {1.0f, 0.5f, 1.0f, 1.0f, 2.0f, 1.0f, 0.5f, 0.5f, 1.0f, 0.5f, 2.0f, 1.0f, 1.0f, 0.5f, 1.0f, 2.0f, 0.5f, 0.5f};
-    Type Rock=      {1.0f, 2.0f, 1.0f, 1.0f, 1.0f, 2.0f, 0.5f, 1.0f, 0.5f, 2.0f, 1.0f, 2.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.5f, 1.0f};
-    Type Ghost=     {0.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f, 1.0f, 2.0f, 1.0f, 0.5f, 1.0f, 1.0f};
-    Type Dragon=    {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f, 0.5f, 0.0f};
-    Type Dark=      {1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.5f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f, 1.0f, 2.0f, 1.0f, 0.5f, 1.0f, 0.5f};
-    Type Steel=     {1.0f, 0.5f, 0.5f, 0.5f, 1.0f, 2.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f, 1.0f, 1.0f, 0.5f, 2.0f};
-    Type Fairy=     {1.0f, 0.5f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 0.5f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 2.0f, 0.5f, 1.0f};
+    Type Normal =   { 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.5f, 0.0f, 1.0f, 1.0f, 0.5f, 1.0f };
+    Type Fire =     { 1.0f, 0.5f, 0.5f, 1.0f, 2.0f, 2.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 0.5f, 1.0f, 0.5f, 1.0f, 2.0f, 1.0f };
+    Type Water =    { 1.0f, 2.0f, 0.5f, 1.0f, 0.5f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f, 0.5f, 1.0f, 1.0f, 1.0f };
+    Type Electric = { 1.0f, 1.0f, 2.0f, 0.5f, 0.5f, 1.0f, 1.0f, 1.0f, 0.0f, 2.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.5f, 1.0f, 1.0f, 1.0f };
+    Type Grass =    { 1.0f, 0.5f, 2.0f, 1.0f, 0.5f, 1.0f, 1.0f, 0.5f, 2.0f, 0.5f, 1.0f, 0.5f, 2.0f, 1.0f, 0.5f, 1.0f, 0.5f, 1.0f };
+    Type Ice =      { 1.0f, 0.5f, 0.5f, 1.0f, 2.0f, 0.5f, 1.0f, 1.0f, 2.0f, 2.0f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f, 0.5f, 1.0f };
+    Type Fighting = { 2.0f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f, 0.5f, 1.0f, 0.5f, 0.5f, 0.5f, 2.0f, 0.0f, 1.0f, 2.0f, 2.0f, 0.5f };
+    Type Poison =   { 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f, 1.0f, 0.5f, 0.5f, 1.0f, 1.0f, 1.0f, 0.5f, 0.5f, 1.0f, 1.0f, 0.0f, 2.0f };
+    Type Ground =   { 1.0f, 2.0f, 1.0f, 2.0f, 0.5f, 1.0f, 1.0f, 2.0f, 1.0f, 0.0f, 1.0f, 0.5f, 2.0f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f };
+    Type Flying =   { 1.0f, 1.0f, 1.0f, 0.5f, 2.0f, 1.0f, 2.0f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 0.5f, 1.0f, 1.0f, 1.0f, 0.5f, 1.0f };
+    Type Psychic =  { 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 2.0f, 1.0f, 1.0f, 0.5f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.5f, 1.0f };
+    Type Bug =      { 1.0f, 0.5f, 1.0f, 1.0f, 2.0f, 1.0f, 0.5f, 0.5f, 1.0f, 0.5f, 2.0f, 1.0f, 1.0f, 0.5f, 1.0f, 2.0f, 0.5f, 0.5f };
+    Type Rock =     { 1.0f, 2.0f, 1.0f, 1.0f, 1.0f, 2.0f, 0.5f, 1.0f, 0.5f, 2.0f, 1.0f, 2.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.5f, 1.0f };
+    Type Ghost =    { 0.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f, 1.0f, 2.0f, 1.0f, 0.5f, 1.0f, 1.0f };
+    Type Dragon =   { 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f, 0.5f, 0.0f };
+    Type Dark =     { 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.5f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f, 1.0f, 2.0f, 1.0f, 0.5f, 1.0f, 0.5f };
+    Type Steel =    { 1.0f, 0.5f, 0.5f, 0.5f, 1.0f, 2.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 1.0f, 1.0f, 1.0f, 0.5f, 2.0f };
+    Type Fairy =    { 1.0f, 0.5f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 0.5f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 2.0f, 2.0f, 0.5f, 1.0f };
 
 
     std::string TypeChoice;
@@ -101,6 +91,7 @@ int main()
     {
         std::cout << "\n\nPick a Pokemon Type: ";
         std::cin >> TypeChoice;
+        std::system("cls");
         std::transform(TypeChoice.begin(), TypeChoice.end(), TypeChoice.begin(), tolower);
         if (TypeChoice == "normal") { std::cout << "\n\nPicked Normal:" << Normal.str(); }
         else if (TypeChoice == "fire") { std::cout << "\n\nPicked Fire:" << Fire.str(); }
@@ -122,7 +113,7 @@ int main()
         else if (TypeChoice == "fairy") { std::cout << "\n\nPicked Fairy:" << Fairy.str(); }
         else if (TypeChoice == "quit") { break; }
         else { std::cout << "\n\nDid not pick a valid type"; }
-        std::cin.get();
+        
     }
     return 0;
 }
